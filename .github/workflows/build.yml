@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target: [K2P, K2P-USB]
-        toolchain: [mipsel-linux-musl]
+        target: [R2100]
+        toolchain: [mipsel-linux-uclibc]
+        toolchaingcc: [mipsel-linux-uclibc]
     steps:
       - uses: actions/checkout@main
       - uses: hendrikmuhs/ccache-action@main
