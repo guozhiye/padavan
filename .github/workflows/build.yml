@@ -16,8 +16,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [K2P, K2P-USB]
-        toolchain: [mipsel-linux-musl]
+        target: [R2100]
+        toolchain: [mipsel-linux-uclibc]
 
     steps:
       - uses: actions/checkout@main
