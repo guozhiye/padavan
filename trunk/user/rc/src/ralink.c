@@ -1201,7 +1201,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	fprintf(fp, "HT_RDG=%d\n", i_val);
 
 	//HT_LinkAdapt
-	fprintf(fp, "HT_LinkAdapt=%d\n", 0);
+	fprintf(fp, "HT_LinkAdapt=%d\n", 1);
 
 	//HT_OpMode
 	i_gfe = nvram_wlan_get_int(is_aband, "HT_OpMode");
@@ -1288,7 +1288,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	fprintf(fp, "HT_BW=%d\n", i_val);
 
 	//HT_BSSCoexistence
-	fprintf(fp, "HT_BSSCoexistence=%d\n", 0);
+	fprintf(fp, "HT_BSSCoexistence=%d\n", 1);
 
 	//HT_BSSCoexAPCntThr
 	fprintf(fp, "HT_BSSCoexAPCntThr=%d\n", 10);
@@ -1329,7 +1329,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	#endif
 
 	//HT_GI
-	fprintf(fp, "HT_GI=%d;%d\n", 1, 1);
+	fprintf(fp, "HT_GI=%d;%d\n", 0, 0);
 
 	//HT_STBC
 	i_stbc = nvram_wlan_get_int(is_aband, "stbc");
@@ -1382,10 +1382,10 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 		}
 		
 		//VHT_SGI
-		fprintf(fp, "VHT_SGI=%d\n", 1);
+		fprintf(fp, "VHT_SGI=%d\n", 0);
 		
 		//VHT_BW_SIGNAL
-		fprintf(fp, "VHT_BW_SIGNAL=%d\n", 0);
+		fprintf(fp, "VHT_BW_SIGNAL=%d\n", 1);
 		
 		//VHT_DisallowNonVHT
 		fprintf(fp, "VHT_DisallowNonVHT=%d\n", 0);
